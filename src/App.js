@@ -35,7 +35,7 @@ class App extends Component {
         const { users } = response.data;
         this.setState({ users: [...this.state.users, ...users] });
       })
-      .catch(() => alert("Error fetching new users"));
+      .catch((e) => console.log("Error fetching new users"+", "+ e));
   };
 
   addUser = ({ name, position, company }) => {
